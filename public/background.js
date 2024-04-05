@@ -17,10 +17,6 @@ chrome.windows.onFocusChanged.addListener((windowId) => {
       if (!tabTimes[activeTabId]) {
         tabTimes[activeTabId] = 0;
       }
-      const activetab = tabs[0];
-      chrome.cookies.getAll({ url: activetab.url }, function(cookies){
-        console.log("cookies for the current tab", cookies);
-      })
     });
   }
 });
